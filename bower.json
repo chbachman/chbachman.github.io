@@ -1,0 +1,10 @@
+{
+  "name": "chbachman.github.io",
+  "description": "Personal Website",
+  "authors": [
+    "chbachman"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/chbachman/chbachman.github.io",
+  "private": true
+}

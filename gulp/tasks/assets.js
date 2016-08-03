@@ -24,7 +24,7 @@ gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
-    'src/assets/javascript/vendor.js',
+    'src/assets/vendor/**/dist/**/*.min.js',
     'src/assets/javascript/main.js'
   ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
@@ -54,7 +54,7 @@ gulp.task('scripts', () =>
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
 // then minwhenies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
-  gulp.src('src/assets/scss/style.scss')
+  gulp.src(['src/assets/scss/style.scss', 'src/assets/vendor/**/dist/**/*.css'])
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
       precision: 10

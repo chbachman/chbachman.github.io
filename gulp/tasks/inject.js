@@ -5,7 +5,7 @@ const inject = require('gulp-inject');
 // 'gulp inject:head' -- injects our style.css file into the head of our HTML
 gulp.task('inject:head', () =>
   gulp.src('.tmp/src/_includes/head.html')
-    .pipe(inject(gulp.src('.tmp/assets/stylesheets/*.css'), {ignorePath: '.tmp'}))
+    .pipe(inject(gulp.src(['.tmp/assets/stylesheets/*.css', '.tmp/assets/stylesheets/**/*.min.css']), {ignorePath: '.tmp'}))
     .pipe(gulp.dest('.tmp/src/_includes'))
 );
 
