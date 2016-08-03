@@ -6,3 +6,20 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+$primaryColor: rgb(11, 54, 76);
+$secondaryColor: #555555;
+
+.bg-1{
+  background-color: $primaryColor;
+}
+
+.bg-2{
+  background-color: $secondaryColor;
+}
+
+#logo img {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
