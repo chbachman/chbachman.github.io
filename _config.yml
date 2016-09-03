@@ -18,7 +18,7 @@ author:
   uri: https://chbachman.github.io/
   bio: Programmer
   twitter:
-  github:
+  github: chbachman
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts

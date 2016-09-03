@@ -1,22 +1,6 @@
-body {
-  padding-top: 50px;
-}
-
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
-
-$primaryColor: rgb(11, 54, 76);
-$secondaryColor: #555555;
-
-.bg-1{
-  background-color: $primaryColor;
-}
-
-.bg-2{
-  background-color: $secondaryColor;
-}
+@import "base";
+@import "navbar";
+@import "./fa/font-awesome";
 
 #logo img {
   margin: 0;

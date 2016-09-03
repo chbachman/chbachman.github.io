@@ -6,5 +6,6 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/chbachman/chbachman.github.io",
-  "private": true
+  "private": true,
+  "dependencies": {}
 }

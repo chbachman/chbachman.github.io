@@ -136,7 +136,7 @@ This mod is licensed under the [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.ht
 
 ####I am active on:
 
-* [\#ModularArmour on EsperNet](http://webchat.esper.net/?nick=IHaveAQuestion.....&channels=ModularArmour&fg_color=111111&fg_sec_color=828282&bg_color=E8E8E8&prompt=0)
+* [\#ModularArmour on EsperNet](http://webchat.esper.net/?nick=IHave.Questions&channels=ModularArmour&fg_color=111111&fg_sec_color=828282&bg_color=E8E8E8&prompt=0)
 * [Feed-The-Beast Forums](http://forum.feed-the-beast.com/conversations/add?to=chbachman)
 * [Twitter](https://www.twitter.com/chbachman)
 * [Github](https://www.github.com/chbachman)
