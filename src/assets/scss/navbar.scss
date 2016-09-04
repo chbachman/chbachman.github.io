@@ -1,7 +1,7 @@
 .navbar {
   background-color: $primaryColor;
 
-  a {
+  a, p {
     color: white;
   }
 
@@ -21,4 +21,10 @@
       background-color: white;
     }
   }
+}
+
+.navbar-static-bottom{
+  @extend .navbar-static-top;
+
+  margin-bottom: 0 !important;
 }
