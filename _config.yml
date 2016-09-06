@@ -1,8 +1,8 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: chbachman.github.io
+title: chbachman
 description: Personal Website
-url: https://chbachman.github.io/
+url: https://chbachman.com/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -15,9 +15,9 @@ exclude: ['assets']
 author:
   name: chbachman
   email: cbachman@bachmangroup.com
-  uri: https://chbachman.github.io/
+  uri: https://chbachman.com/
   bio: Programmer
-  twitter:
+  twitter: chbachman
   github: chbachman
 
 # _config.build.yml overwrites these options when you run `gulp build`

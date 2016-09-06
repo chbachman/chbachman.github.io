@@ -13,16 +13,15 @@ title: Modular Armour
       Table of Contents <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="#requires"> Requirements </a></li>
-      <li><a href="#integration-with"> Integration </a></li>
-      <li><a href="#features"> Features </a></li>
-      <li><a href="#list-of-upgrades"> List of Upgrades </a></li>
-      <li><a href="#requires"> Pictures </a></li>
-      <li><a href="#source-code"> Source Code </a></li>
-      <li><a href="#downloads"> Downloads </a></li>
-      <li><a href="#issues"> Issues </a></li>
-      <li><a href="#modpackslicense"> Modpacks/License </a></li>
-      <li><a href="#contact"> Contact </a></li>
+      <li><a href="#requires">          Requirements      </a></li>
+      <li><a href="#integration-with">  Integration       </a></li>
+      <li><a href="#features">          Features          </a></li>
+      <li><a href="#list-of-upgrades">  List of Upgrades  </a></li>
+      <li><a href="#requires">          Pictures          </a></li>
+      <li><a href="#source-code">       Source Code       </a></li>
+      <li><a href="#downloads">         Downloads         </a></li>
+      <li><a href="#issues">            Issues            </a></li>
+      <li><a href="#modpackslicense">   Modpacks/License  </a></li>
     </ul>
   </li>
 </ul>
@@ -67,14 +66,14 @@ title: Modular Armour
 
 ##Pictures:
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="ma-slide" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#ma-slide" data-slide-to="0" class="active"></li>
+    <li data-target="#ma-slide" data-slide-to="1"></li>
+    <li data-target="#ma-slide" data-slide-to="2"></li>
+    <li data-target="#ma-slide" data-slide-to="3"></li>
+    <li data-target="#ma-slide" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -97,12 +96,12 @@ title: Modular Armour
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <a class="left carousel-control" href="#ma-slide" role="button" data-slide="prev">
+    <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="right carousel-control" href="#ma-slide" role="button" data-slide="next">
+    <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -112,8 +111,8 @@ title: Modular Armour
 ###[My mod is open source!](https://github.com/chbachman/ModularArmour)
 
 ##Downloads:
- * ####[CurseForge](http://minecraft.curseforge.com/mc-mods/224011-modular-armour)
- * ####[Beta Downloads](http://tehnut.info/jenkins/view/chbachman/job/ModularArmour/)
+ * [CurseForge](http://minecraft.curseforge.com/mc-mods/224011-modular-armour)
+ * [Beta Downloads](http://tehnut.info/jenkins/view/chbachman/job/ModularArmour/)
 
 ##Issues:
 
@@ -127,17 +126,3 @@ Go Ahead. I can't control it in the first place, why try to? However, I would pr
 
 ####License:
 This mod is licensed under the [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html)
-
-##Donations:
-
-####[I have a patreon!](http://patreon.com/chbachman)
-
-##Contact:
-
-####I am active on:
-
-* [\#ModularArmour on EsperNet](http://webchat.esper.net/?nick=IHave.Questions&channels=ModularArmour&fg_color=111111&fg_sec_color=828282&bg_color=E8E8E8&prompt=0)
-* [Feed-The-Beast Forums](http://forum.feed-the-beast.com/conversations/add?to=chbachman)
-* [Twitter](https://www.twitter.com/chbachman)
-* [Github](https://www.github.com/chbachman)
-* [Email](mailto:cbachman@bachmangroup.com)

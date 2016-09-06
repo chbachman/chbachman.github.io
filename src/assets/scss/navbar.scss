@@ -5,20 +5,30 @@
     color: white;
   }
 
-  .navbar-brand:hover, .navbar-brand:focus{
-    color: darken($primaryColor, 20%);
-    background-color: #EEE;
-  }
-
   .nav > li > a:hover, .nav > li > a:focus {
-    color: darken($primaryColor, 20%);
-    background-color: #EEE;
+    color: $secondaryColor;
+    background-color: inherit;
   }
 
   .navbar-header {
+    .fa-bars {
+      color: white;
+      font-size: 2em;
+    }
 
-    .icon-bar {
-      background-color: white;
+    .navbar-toggle {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+
+    .fa-bars:hover, .fa-bars:focus {
+      color: $secondaryColor;
+    }
+
+    .navbar-brand:hover, .navbar-brand:focus {
+      color: $secondaryColor;
+      background-color: inherit;
     }
   }
 }
