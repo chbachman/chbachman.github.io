@@ -54,6 +54,35 @@ gulp.task('scripts', () =>
     .pipe(gulp.dest('.tmp/assets/javascript'))
 );
 
+// 'gulp scripts' -- creates a index.js file from your JavaScript files and
+// creates a Sourcemap for it
+// 'gulp scripts --prod' -- creates a index.js file from your JavaScript files,
+// minifies, gzips and cache busts it. Does not create a Sourcemap
+gulp.task('scripts-page', () =>
+  // NOTE: The order here is important since it's concatenated in order from
+  // top to bottom, so you want vendor scripts etc on top
+  gulp.src([
+    'src/assets/javascript/page/**/*.js'
+  ])
+    .pipe(when(!argv.prod, sourcemaps.init()))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(when(argv.prod, when('*.js', uglify({preserveComments: 'some'}))))
+    .pipe(when(argv.prod, size({
+      showFiles: true
+    })))
+    .pipe(when(argv.prod, rev()))
+    .pipe(when(!argv.prod, sourcemaps.write('.')))
+    .pipe(when(argv.prod, gulp.dest('.tmp/assets/javascript/pages')))
+    .pipe(when(argv.prod, when('*.js', gzip({append: true}))))
+    .pipe(when(argv.prod, size({
+      gzip: true,
+      showFiles: true
+    })))
+    .pipe(gulp.dest('.tmp/assets/javascript/pages'))
+);
+
 // 'gulp styles' -- creates a CSS file from your SASS, adds prefixes and
 // creates a Sourcemap
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
@@ -87,6 +116,38 @@ gulp.task('styles', () =>
     .pipe(when(!argv.prod, browserSync.stream()))
 );
 
+// 'gulp styles' -- creates a CSS file from your SASS, adds prefixes and
+// creates a Sourcemap
+// 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
+// then minwhenies, gzips and cache busts it. Does not create a Sourcemap
+gulp.task('styles-page', () =>
+  gulp.src(['src/assets/scss/pages/**/*.scss'])
+    .pipe(when(!argv.prod, sourcemaps.init()))
+    .pipe(sass({
+      precision: 10
+    }).on('error', sass.logError))
+    .pipe(postcss([
+      autoprefixer({browsers: 'last 1 version'})
+    ]))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
+    .pipe(when(argv.prod, size({
+      showFiles: true
+    })))
+    .pipe(when(argv.prod, rev()))
+    .pipe(when(!argv.prod, sourcemaps.write('.')))
+    .pipe(when(argv.prod, gulp.dest('.tmp/assets/stylesheets/pages')))
+    .pipe(when(argv.prod, when('*.css', gzip({append: true}))))
+    .pipe(when(argv.prod, size({
+      gzip: true,
+      showFiles: true
+    })))
+    .pipe(gulp.dest('.tmp/assets/stylesheets/pages'))
+    .pipe(when(!argv.prod, browserSync.stream()))
+);
+
 // Function to properly reload your browser
 function reload(done) {
   browserSync.reload();
@@ -105,7 +166,7 @@ gulp.task('serve', (done) => {
   // Watch various files for changes and do the needful
   gulp.watch(['src/**/*.md', 'src/**/*.html', 'src/**/*.yml'], gulp.series('build:site', reload));
   gulp.watch(['src/**/*.xml', 'src/**/*.txt'], gulp.series('site', reload));
-  gulp.watch('src/assets/javascript/**/*.js', gulp.series('scripts', reload));
-  gulp.watch('src/assets/scss/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/assets/javascript/**/*.js', gulp.series(gulp.parallel('scripts', 'scripts-page'), reload));
+  gulp.watch('src/assets/scss/**/*.scss', gulp.series(gulp.parallel('styles', 'styles-page')));
   gulp.watch('src/assets/images/**/*', gulp.series('images', reload));
 });

@@ -14,6 +14,8 @@
   <!-- inject:css -->
   <!-- endinject -->
 
+  {% if page.css %} {% for css in page.css %} <link rel="stylesheet" href="/assets/stylesheets/pages/{{css}}.css"> {% endfor %} {% endif %}
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/touch/apple-touch-icon-144-precomposed.png">
   <link rel="shortcut icon" href="/assets/favicon.ico">
