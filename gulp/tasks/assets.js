@@ -62,7 +62,8 @@ gulp.task('scripts-page', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
-    'src/assets/javascript/page/**/*.js'
+    'src/assets/javascript/page/**/*.js',
+    'src/assets/javascript/external/**.*.js'
   ])
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(size({

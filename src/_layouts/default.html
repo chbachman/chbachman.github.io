@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body {% if page.angular %} ng-app="{{page.angular}}" {% endif %}>
 
     {% include header.html %}
 

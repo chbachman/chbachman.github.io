@@ -1,3 +1,5 @@
+/* eslint-env jquery, browser */
+
 $(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+	$('[data-toggle="tooltip"]').tooltip();
+});
