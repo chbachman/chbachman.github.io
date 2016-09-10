@@ -1,45 +1,39 @@
-// generated on 2016-08-03 using generator-jekyllized 1.0.0-rc.5
-'use strict';
-
 const gulp = require('gulp');
+const HubRegistry = require('gulp-hub');
+const browserSync = require('browser-sync');
 
-const requireDir = require('require-dir');
-const tasks = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
+const conf = require('./conf/gulp.conf');
 
-// 'gulp inject' -- injects your CSS and JS into either the header or the footer
-gulp.task('inject', gulp.parallel('inject:head', 'inject:footer'));
+// Load some files into the registry
+const hub = new HubRegistry([conf.path.tasks('*.js')]);
 
-// 'gulp build:site' -- copies, builds, and then copies it again
-gulp.task('build:site', gulp.series('site:tmp', 'inject', 'site', 'copy:site'));
+// Tell gulp to use the tasks just loaded
+gulp.registry(hub);
 
-// 'gulp assets' -- cleans out your assets and rebuilds them
-// 'gulp assets --prod' -- cleans out your assets and rebuilds them with
-// production settings
-gulp.task('assets', gulp.series(
-  gulp.parallel('styles', 'scripts', 'scripts-page', 'styles-page', 'fonts', 'images'),
-  gulp.series('copy:assets')
-));
+gulp.task('inject', gulp.series(gulp.parallel('styles', 'scripts'), 'inject'));
+gulp.task('build', gulp.series('partials', gulp.parallel('inject', 'other'), 'build'));
+gulp.task('test', gulp.series('scripts'));
+gulp.task('serve', gulp.series('inject', 'watch', 'browsersync'));
+gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
+gulp.task('default', gulp.series('clean', 'build'));
+gulp.task('watch', watch);
 
-// 'gulp clean' -- erases your assets and gzipped files
-gulp.task('clean', gulp.parallel('clean:assets', 'clean:gzip', 'clean:dist', 'clean:site'));
+function reloadBrowserSync(cb) {
+	browserSync.reload();
+	cb();
+}
 
-// 'gulp build' -- same as 'gulp' but doesn't serve your site in your browser
-// 'gulp build --prod' -- same as above but with production settings
-gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html'));
+function watch(done) {
+	gulp.watch([
+		conf.path.src('index.html'),
+		'bower.json'
+	], gulp.parallel('inject'));
 
-// You can also just use 'gulp upload' but this way you can see all the main
-// tasks in the gulpfile instead of having to hunt for the deploy tasks
-gulp.task('deploy', gulp.series('upload'));
-
-// 'gulp rebuild' -- WARNING: Erases your assets and built site, use only when
-// you need to do a complete rebuild
-gulp.task('rebuild', gulp.series('clean', 'clean:images'));
-
-// 'gulp check' -- checks your site configuration for errors and lint your JS
-gulp.task('check', gulp.series('site:check'));
-
-// 'gulp' -- cleans your assets and gzipped files, creates your assets and
-// injects them into the templates, then builds your site, copied the assets
-// into their directory and serves the site
-// 'gulp --prod' -- same as above but with production settings
-gulp.task('default', gulp.series('build', 'serve'));
+	gulp.watch(conf.path.src('app/**/*.html'), gulp.series('partials', reloadBrowserSync));
+	gulp.watch([
+		conf.path.src('**/*.less'),
+		conf.path.src('**/*.css')
+	], gulp.series('styles'));
+	gulp.watch(conf.path.src('**/*.js'), gulp.series('inject'));
+	done();
+}
