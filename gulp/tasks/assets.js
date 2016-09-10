@@ -10,6 +10,7 @@ const newer = require('gulp-newer');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const rev = require('gulp-rev');
+const ngAnnotate = require('gulp-ng-annotate');
 const sass = require('gulp-sass');
 const size = require('gulp-size');
 const sourcemaps = require('gulp-sourcemaps');
@@ -25,11 +26,13 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/vendor/angular/angular.min.js',
-    'src/assets/vendor/jquery/dist/jquery.min.js',
-    'src/assets/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    'src/assets/vendor/angular-animate/angular-animate.min.js',
+    'src/assets/vendor/angular-touch/angular-touch.min.js',
+    'src/assets/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
     'src/assets/javascript/main.js'
   ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
+    .pipe(ngAnnotate())
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(size({
       showFiles: true
@@ -63,9 +66,10 @@ gulp.task('scripts-page', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/javascript/page/**/*.js',
-    'src/assets/javascript/external/**.*.js'
+    'src/assets/external/**/*.js'
   ])
     .pipe(when(!argv.prod, sourcemaps.init()))
+    .pipe(ngAnnotate())
     .pipe(size({
       showFiles: true
     }))

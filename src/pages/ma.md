@@ -66,44 +66,16 @@ title: Modular Armour
 
 ##Pictures:
 
-<div id="ma-slide" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#ma-slide" data-slide-to="0" class="active"></li>
-    <li data-target="#ma-slide" data-slide-to="1"></li>
-    <li data-target="#ma-slide" data-slide-to="2"></li>
-    <li data-target="#ma-slide" data-slide-to="3"></li>
-    <li data-target="#ma-slide" data-slide-to="4"></li>
-  </ol>
-
+<div ng-controller="Carousel" style="height: 305px">
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="/assets/images/armouritem.png" alt="...">
-    </div>
-    <div class="item">
-      <img src="/assets/images/armouron.png" alt="...">
-    </div>
-    <div class="item">
-      <img src="/assets/images/defaultgui.png" alt="...">
-    </div>
-    <div class="item">
-      <img src="/assets/images/selectgui.png" alt="...">
-    </div>
-    <div class="item">
-      <img src="/assets/images/upgradeList.png" alt="...">
+  <div uib-carousel active="active" interval="myInterval" role="listbox">
+    <div uib-slide class="item" ng-repeat="slide in slides track by slide.id" index="slide.id">
+      <img ng-src="{(slide.image)}" class="img-responsive">
+			<div class="carousel-caption">
+          <h4>Slide {(slide.id)}</h4>
+        </div>
     </div>
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#ma-slide" role="button" data-slide="prev">
-    <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#ma-slide" role="button" data-slide="next">
-    <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
 ##Source Code:
