@@ -1,0 +1,60 @@
+.navbar {
+  background-color: @primaryColor;
+  margin-bottom: 0;
+
+  a, p {
+    color: white;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    color: @secondaryColor;
+    background-color: inherit;
+  }
+
+  .navbar-header {
+    .fa-bars {
+      color: white;
+      font-size: 2em;
+    }
+
+    .navbar-toggle {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .fa-bars:hover, .fa-bars:focus {
+      color: @secondaryColor;
+    }
+
+    .navbar-brand:hover, .navbar-brand:focus {
+      color: @secondaryColor;
+      background-color: inherit;
+    }
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+footer .container{
+  background-color: #f5f5f5;
+}
+
+footer p{
+  padding-left: 15px;
+  padding-right: 15px;
+}
