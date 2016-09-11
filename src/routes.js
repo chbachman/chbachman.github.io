@@ -4,7 +4,7 @@ angular.module('app')
 
 .config(function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 	$locationProvider.html5Mode(true).hashPrefix('!');
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/error/');
 
 	$stateProvider.state('app', {
 		url: '/',
@@ -19,5 +19,10 @@ angular.module('app')
 	$stateProvider.state('ma', {
 		url: '/modulararmour/',
 		component: 'modularArmour'
+	});
+
+	$stateProvider.state('error', {
+		url: '/error/',
+		component: 'error'
 	});
 });
