@@ -1,4 +1,5 @@
 @import "less/navbar";
+@import "less/utility";
 
 @primaryColor: #B24C63;
 @secondaryColor: #B0DAF1;
@@ -6,16 +7,13 @@
 // Text classes follow
 .text-1 {
   color: @primaryColor;
-
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: lighten(@primaryColor, 10%);
   }
 }
 
 .text-2 {
   color: @secondaryColor;
-
   a:hover, a:focus {
     color: lighten(@secondaryColor, 10%);
   }
@@ -23,31 +21,24 @@
 
 .text-white {
   color: white;
-
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: darken(white, 10%);
   }
-
 }
 
 // Background classes follow
-.bg-1{
+.bg-1 {
   color: white;
   background-color: @primaryColor;
-
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     background-color: lighten(@primaryColor, 10%);
   }
 }
 
-.bg-2{
+.bg-2 {
   color: white;
   background-color: @secondaryColor;
-
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     background-color: lighten(@secondaryColor, 10%);
   }
 }

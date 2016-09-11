@@ -1,0 +1,71 @@
+<chbachman-header></chbachman-header>
+<div class="container">
+  <div id="logo" class="row">
+    <img class="img-responsive center-block" src="/images/logo.jpg" title="Can't you tell my names are so creative?"/>
+  </div>
+
+  <h2>Integration with:</h2>
+
+  <ul>
+    <li>Thermal Foundation</li>
+    <li>Baubles</li>
+    <li>Thaumcraft</li>
+    <li>Enviromine</li>
+    <li>Blood Magic</li>
+    <li>Botania</li>
+    <li>Minetweaker</li>
+    <li>Solar Expansion</li>
+  </ul>
+
+  <h2>Features:</h2>
+
+  <ul>
+    <li>Modular Armour. Duh.</li>
+    <li>Editable Recipes. All upgrade recipes are defined by easily editable JSON files in the config directory.</li>
+    <li>Editable Values. Almost all values (energy drain, max power) are defined in the config.</li>
+  </ul>
+
+  <table class="table table-striped table-condensed table-bordered">
+    <thead>
+      <tr> <th colspan="4"> Upgrades </th> </tr>
+    </thead>
+    <tbody>
+      <tr> <td>Jetpack</td> <td>Long Fall Dampeners</td> <td>Solar Helmet</td> <td>Walking Speed Boost</td></tr>
+      <tr> <td>Calf Shields</td> <td>Solar Helmet</td> <td>Auto Feeder</td> <td>Vis Discount</td></tr>
+      <tr> <td>Potion</td> <td>Auto Feeder</td> <td>Step Assist</td> <td>Upgrade of Revealing</td></tr>
+      <tr> <td>Jump Boost</td> <td>Electrolyzer</td> <td>Magnet</td> <td>Night Vision</td></tr>
+      <tr> <td>Leadstone Energy</td> <td>Hardened Energy</td> <td>Reinforced Energy</td> <td>Resonant Energy</td></tr>
+      <tr> <td>Invisibility</td> <td>Thomaz's Textures</td> <td>Armor Camouflage</td> <td>Camel Pack</td></tr>
+      <tr> <td>Gas Mask</td> <td>Pixie Spawner</td> <td>Mana Converter</td> <td>LP Converter</td></tr>
+      <tr> <td>Solar Helmet</td> <td>Undead Protection</td> <td>Arthropod Protection</td> <td>Fire Protection</td></tr>
+      <tr> <td>Unblockable Protector</td> <td>Magic Protector</td> <td>Lava Protection</td> <td>Player Protector</td></tr>
+      <tr> <td>Wither Protector</td> <td>Explosion Protector</td> <td>General Protector</td> <td>Projectile Protector</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Pictures:</h2>
+
+  <div ng-controller="Carousel">
+    <div uib-carousel active="active" interval="myInterval" role="listbox">
+      <div uib-slide class="item" ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" class="img-responsive">
+      </div>
+    </div>
+  </div>
+
+  <h3><a href="https://github.com/chbachman/ModularArmour">My mod is open source!</a></h3>
+  <h2>Downloads:</h2>
+  <ul>
+    <li><a href="http://minecraft.curseforge.com/mc-mods/224011-modular-armour">CurseForge</a></li>
+    <li><a href="http://tehnut.info/jenkins/view/chbachman/job/ModularArmour/">Beta Downloads</a></li>
+  </ul>
+  <h2>Issues:</h2>
+  <p>Please keep them out of the various forum posts and social networks, for my sanity.
+  Please use the <a href="https://github.com/chbachman/ModularArmour/issues">Github Issue Tracker</a> to report issues and suggestions.</p>
+  <h2>Modpacks/License:</h2>
+  <h4>Modpacks:</h4>
+  <p>Go Ahead. I can’t control it in the first place, why try to? However, I would prefer if you left me a little note, just so that I can see how many people are using it.</p>
+  <h4>License:</h4>
+  <p>This mod is licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></p>
+</div>
+<chbachman-footer></chbachman-footer>

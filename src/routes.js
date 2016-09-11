@@ -8,11 +8,16 @@ angular.module('app')
 
 	$stateProvider.state('app', {
 		url: '/',
-		component: 'app'
+		component: 'main'
 	});
 
 	$stateProvider.state('contact', {
 		url: '/contact/',
 		component: 'contact'
+	});
+
+	$stateProvider.state('ma', {
+		url: '/modulararmour/',
+		component: 'modularArmour'
 	});
 });

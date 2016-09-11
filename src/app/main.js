@@ -1,5 +1,4 @@
-angular
-.module('app')
-.component('app', {
+angular.module('app')
+.component('main', {
 	templateUrl: 'app/main.html'
 });
