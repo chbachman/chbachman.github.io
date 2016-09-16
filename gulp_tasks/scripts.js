@@ -9,7 +9,7 @@ gulp.task('scripts', scripts);
 function scripts() {
   return gulp.src(conf.path.src('**/*.js'))
     .pipe(plumber({errorHandler: errorHandler}))
-    .pipe(xo())
+    //.pipe(xo())
     .pipe(gulp.dest(conf.path.tmp()));
 }
 

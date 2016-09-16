@@ -61,11 +61,13 @@
       "browser"
     ],
     "globals": [
-      "angular"
+      "angular",
+      "_"
     ],
     "ignores": [
       "gulp_tasks/**",
-      "conf/**"
+      "conf/**",
+      "src/vendor/**"
     ]
   }
 }
