@@ -1,0 +1,281 @@
+[{
+  "options": [{
+    "name": "Enthusiastic", 		"plus": "I", "minus": "I"
+  }, {
+    "name": "Daring", 					"plus": "D", "minus": "D"
+  }, {
+    "name": "Diplomatic", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Satisfied", 				"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Cautious", 				"plus": "C", "minus": "C"
+  }, {
+    "name": "Determined", 			"plus": "D", "minus": "D"
+  }, {
+    "name": "Convincing", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Good-Natured", 		"plus": "S", "minus": "N"
+  }]
+}, {
+  "options": [{
+    "name": "Friendly", 				"plus": "I", "minus": "N"
+  }, {
+    "name": "Accurate", 				"plus": "C", "minus": "C"
+  }, {
+    "name": "Outspoken", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Calm", 						"plus": "N", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Talkative", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Controlled", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Conventional", 		"plus": "S", "minus": "S"
+  }, {
+    "name": "Decisive", 				"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Adventurous", 			"plus": "D", "minus": "D"
+  }, {
+    "name": "Insightful", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Outgoing", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Moderate", 				"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Gentle", 					"plus": "S", "minus": "S"
+  }, {
+    "name": "Persuasive", 			"plus": "I", "minus": "N"
+  }, {
+    "name": "Humble", 					"plus": "N", "minus": "C"
+  }, {
+    "name": "Original", 				"plus": "N", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Expressive", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Conscientious", 		"plus": "C", "minus": "C"
+  }, {
+    "name": "Dominant", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Responsive", 			"plus": "N", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Poised", 					"plus": "I", "minus": "I"
+  }, {
+    "name": "Observant", 				"plus": "C", "minus": "N"
+  }, {
+    "name": "Modest", 					"plus": "S", "minus": "S"
+  }, {
+    "name": "Impatient", 				"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Tactful", 					"plus": "C", "minus": "C"
+  }, {
+    "name": "Agreeable", 				"plus": "S", "minus": "S"
+  }, {
+    "name": "Magnetic", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Insistent", 				"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Brave", 						"plus": "D", "minus": "D"
+  }, {
+    "name": "Inspiring", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Submissive", 			"plus": "S", "minus": "S"
+  }, {
+    "name": "Timid", 						"plus": "N", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Reserved", 				"plus": "C", "minus": "C"
+  }, {
+    "name": "Obliging", 				"plus": "S", "minus": "S"
+  }, {
+    "name": "Strong-Willed", 		"plus": "D", "minus": "D"
+  }, {
+    "name": "Cheerful", 				"plus": "I", "minus": "I"
+  }]
+}, {
+  "options": [{
+    "name": "Stimulating", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Kind", 						"plus": "S", "minus": "S"
+  }, {
+    "name": "Perceptive", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Independent", 			"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Competitive", 			"plus": "D", "minus": "D"
+  }, {
+    "name": "Considerate", 			"plus": "S", "minus": "S"
+  }, {
+    "name": "Joyful", 					"plus": "I", "minus": "I"
+  }, {
+    "name": "Private", 					"plus": "C", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Fussy", 						"plus": "C", "minus": "C"
+  }, {
+    "name": "Obedient", 				"plus": "S", "minus": "S"
+  }, {
+    "name": "Firm", 						"plus": "D", "minus": "D"
+  }, {
+    "name": "Playful", 					"plus": "I", "minus": "I"
+  }]
+}, {
+  "options": [{
+    "name": "Attractive", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Introspective", 		"plus": "C", "minus": "N"
+  }, {
+    "name": "Stubborn", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Predictable", 			"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Logical", 					"plus": "C", "minus": "C"
+  }, {
+    "name": "Bold", 						"plus": "D", "minus": "D"
+  }, {
+    "name": "Loyal", 						"plus": "S", "minus": "S"
+  }, {
+    "name": "Charming", 				"plus": "I", "minus": "I"
+  }]
+}, {
+  "options": [{
+    "name": "Sociable", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Patient", 					"plus": "S", "minus": "S"
+  }, {
+    "name": "Self-Reliant", 		"plus": "D", "minus": "D"
+  }, {
+    "name": "Soft-Spoken", 			"plus": "C", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Willing", 					"plus": "S", "minus": "S"
+  }, {
+    "name": "Eager", 						"plus": "D", "minus": "N"
+  }, {
+    "name": "Thorough", 				"plus": "C", "minus": "C"
+  }, {
+    "name": "High-Spirited", 		"plus": "I", "minus": "I"
+  }]
+}, {
+  "options": [{
+    "name": "Aggressive", 			"plus": "D", "minus": "D"
+  }, {
+    "name": "Extroverted", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Amiable", 					"plus": "S", "minus": "S"
+  }, {
+    "name": "Fearful", 					"plus": "N", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Confident", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Sympathetic", 			"plus": "S", "minus": "S"
+  }, {
+    "name": "Impartial", 				"plus": "N", "minus": "C"
+  }, {
+    "name": "Assertive", 				"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Well-Disciplined", "plus": "C", "minus": "C"
+  }, {
+    "name": "Generous", 				"plus": "S", "minus": "S"
+  }, {
+    "name": "Animated", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Persistent", 			"plus": "D", "minus": "D"
+  }]
+}, {
+  "options": [{
+    "name": "Impulsive", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Introverted", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Forceful", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Easygoing", 				"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Good Mixer", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Refined", 					"plus": "C", "minus": "C"
+  }, {
+    "name": "Vigorous", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Lenient", 					"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Captivating", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Contented", 				"plus": "S", "minus": "S"
+  }, {
+    "name": "Demanding", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Compliant", 				"plus": "C", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Argumentative", 		"plus": "D", "minus": "D"
+  }, {
+    "name": "Systematic", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Cooperative", 			"plus": "S", "minus": "S"
+  }, {
+    "name": "Light-Hearted", 		"plus": "I", "minus": "I"
+  }]
+}, {
+  "options": [{
+    "name": "Jovial", 					"plus": "I", "minus": "I"
+  }, {
+    "name": "Precise", 					"plus": "C", "minus": "C"
+  }, {
+    "name": "Direct", 					"plus": "D", "minus": "D"
+  }, {
+    "name": "Even-Tempered", 		"plus": "S", "minus": "S"
+  }]
+}, {
+  "options": [{
+    "name": "Restless", 				"plus": "D", "minus": "D"
+  }, {
+    "name": "Neighborly", 			"plus": "S", "minus": "S"
+  }, {
+    "name": "Appealing", 				"plus": "I", "minus": "I"
+  }, {
+    "name": "Careful", 					"plus": "C", "minus": "C"
+  }]
+}, {
+  "options": [{
+    "name": "Respectful", 			"plus": "C", "minus": "C"
+  }, {
+    "name": "Pioneering", 			"plus": "D", "minus": "D"
+  }, {
+    "name": "Optimistic", 			"plus": "I", "minus": "I"
+  }, {
+    "name": "Helpful", 					"plus": "S", "minus": "S"
+  }]
+}]
