@@ -1,0 +1,74 @@
+<!--<chbachman-header></chbachman-header>-->
+<div class="container" ng-controller="personalityForm">
+  <div class="page-header">
+    <h1>
+      Personality Quiz
+    </h1>
+    <p>
+      To take this quiz, select one quality that describes you the most and the least for each group of adjectives.
+      Your scores will be at the bottom of the page, along with a small description of the personality type you are closest to.
+    </p>
+  </div>
+    <div class="row" ng-repeat="question in questions">
+
+      <div class="col-xs-6">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success">
+            Most
+          </li>
+          <button type="button" class="list-group-item" ng-repeat="option in question.options"
+            ng-class="{'disabled': minus[$parent.$index] == $index, 'list-group-item-success': plus[$parent.$index] == $index}"
+            ng-disabled="minus[$parent.$index] == $index"
+            ng-click="onClick($parent.$index, $index, true)"> {{option.name}} </button>
+        </ul>
+      </div>
+
+
+      <div class="col-xs-6">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-danger">
+            Least
+          </li>
+          <button type="button" class="list-group-item" ng-repeat="option in question.options"
+            ng-class="{'disabled': plus[$parent.$index] == $index, 'list-group-item-danger': minus[$parent.$index] == $index}"
+            ng-disabled="plus[$parent.$index] == $index"
+            ng-click="onClick($parent.$index, $index, false)"> {{option.name}} </button>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="row" ng-show="plus.length || minus.length">
+      <canvas class="chart chart-bar" chart-data="data" chart-colors="colors" chart-labels="labels" chart-options="options"></canvas>
+    </div>
+
+    <div class="row" ng-show="plus.length || minus.length">
+      <h2> You are: {{category.name}} </h2>
+      <p> {{category.description}} </p>
+      <h4> Emotions: </h4>
+      <p>{{category.emotions}} </p>
+      <h4> Goal: </h4>
+      <p>{{category.goal}} </p>
+      <h4> Judges others by: </h4>
+      <p>{{category.judge}} </p>
+      <h4> Influences others by: </h4>
+      <p>{{category.influence}} </p>
+      <h4> Value to the organization: </h4>
+      <p>{{category.value}} </p>
+      <h4> Overuses: </h4>
+      <p>{{category.overuses}} </p>
+      <h4> Under pressure: </h4>
+      <p>{{category.pressure}} </p>
+      <h4> Fears: </h4>
+      <p>{{category.fears}} </p>
+      <h4> Would increase effectiveness through: </h4>
+      <p>{{category.effectiveness}} </p>
+    </div>
+
+    <div class="row" ng-hide="plus.length || minus.length">
+      <h3> Please answer some of the questions above. </h3>
+    </div>
+
+</div>
+<!--<chbachman-footer></chbachman-footer>-->

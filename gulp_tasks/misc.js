@@ -20,6 +20,7 @@ function other() {
     path.join(conf.paths.src, '/**/*'),
     path.join(`!${conf.paths.src}`, '/**/*.{less,js,html}'),
     path.join(conf.paths.src, '/vendor/**/*.js'),
+		path.join(conf.paths.src, '/background/**/*.js'),
     path.join(conf.paths.src, '/404.html'),
   ], {base: 'src'})
     .pipe(fileFilter)

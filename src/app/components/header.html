@@ -9,7 +9,8 @@
 	<div class="collapse navbar-collapse" uib-collapse="navCollapsed">
 		<ul class="nav navbar-nav">
 			<li><a ui-sref="ma">Modular Armour</a></li>
-			<li><a ui-sref="reading">PDF Summary</a></li>
+			<li ng-show="$root.developer"><a ui-sref="personality">Personality</a></li>
+			<li ng-show="$root.developer"><a ui-sref="notepad">Notepad</a></li>
 		</ul>
 	</div>
 </nav>

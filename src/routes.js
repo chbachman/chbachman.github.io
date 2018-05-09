@@ -1,10 +1,7 @@
-/* global angular */
-
 angular.module('app')
 
-.config(function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $transitionsProvider) {
-	$locationProvider.html5Mode(true).hashPrefix('!');
-	$urlRouterProvider.otherwise('/error/');
+.config(function routesConfig($stateProvider, $urlRouterProvider, $transitionsProvider) {
+	$urlRouterProvider.otherwise('/');
 
 	$stateProvider.state('app', {
 		url: '/',
@@ -21,15 +18,20 @@ angular.module('app')
 		component: 'modularArmour'
 	});
 
-	$stateProvider.state('reading', {
-		url: '/reading/',
-		component: 'reading',
-		js: ['/vendor/pdf.js', '/vendor/pdf.worker.js']
+	$stateProvider.state('notepad', {
+		url: '/notepad/',
+		component: 'notepad'
 	});
 
 	$stateProvider.state('error', {
 		url: '/error/',
 		component: 'error'
+	});
+
+	$stateProvider.state('personality', {
+		url: '/personality/',
+		component: 'personality',
+		js: ['vendor/Chart.min.js']
 	});
 
 	$transitionsProvider.onEnter({to: '*'},
