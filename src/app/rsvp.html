@@ -1,0 +1,50 @@
+<chbachman-header></chbachman-header>
+
+<div class="jumbotron" id="smash-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-4">
+        <img class="img-responsive" src="https://www.smashbros.com/assets_v2/img/top/hero_title_en.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-controller="rsvpController">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h1> {{event.title}} </h1>
+      <p> {{event.description}} </p>
+    </div>
+    <div class="col-sm-6">
+      <form>
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input ng-model="event.name" type="text" class="form-control" id="inputName" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <ul class="list-group">
+            <li class="list-group-item bg-1">
+              {{event.question}}
+            </li>
+            <button type="button" class="list-group-item" ng-repeat="option in event.options"
+              ng-class="{
+                'disabled': event.selected !== undefined && event.selected != $index,
+                'list-group-item-success': event.selected == $index
+              }"
+              ng-click="event.selected = $index"> {{option}} </button>
+          </ul>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-default"
+          ng-click="onSubmit()"
+          ng-class="{'disabled': event.selected === undefined || event.name === undefined}"
+        >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<chbachman-footer></chbachman-footer>

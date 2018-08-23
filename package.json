@@ -63,7 +63,7 @@
     "globals": [
       "angular",
       "_",
-			"localforage"
+      "localforage"
     ],
     "ignores": [
       "gulp_tasks/**",
