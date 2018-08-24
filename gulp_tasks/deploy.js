@@ -1,14 +1,10 @@
-
-'use strict';
-const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
+'use strict'
+const gulp = require('gulp')
+const ghPages = require('gh-pages')
 
 // 'gulp deploy' -- pushes your dist folder to Github
-gulp.task('upload', upload);
-
-function upload () {
-  return gulp.src('dist/**/*')
-    .pipe(ghPages({
-      branch: "master"
-    }));
-}
+gulp.task('upload', function (cb) {
+  ghPages.publish('dist', {
+    branch: 'master'
+  }, cb)
+})

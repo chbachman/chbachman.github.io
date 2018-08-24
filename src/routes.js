@@ -41,8 +41,6 @@ angular.module('app')
       component: 'rsvpCreate'
     })
 
-    $locationProvider.html5Mode(true)
-
     // This handles the page specific javascript injection of libraries.
     // Allows some pages to have large libraries that don't impact other pages.
     $transitionsProvider.onEnter({to: '*'},
