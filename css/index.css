@@ -1,0 +1,92 @@
+:root {
+  --navbar-height: 7vh;
+  --primary-color: #B24C63;
+  --secondary-color: #B0DAF1;
+  --navbar-animation-step: 1s;
+  --navbar-animation-width: 1rem;
+  --navbar-animation-height: 0.2rem;
+  --navbar-animation-distance: 0.3rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--navbar-height);
+  color: white;
+}
+
+.navbar-content {
+  padding: 0 0 0 50px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  padding: 0px 30px;
+  color: white;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar a {
+  display:block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar-spacer {
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--secondary-color);
+}
+
+.navbar-menu {
+  display:none;
+}
+
+.navbar-menu-label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 56px;
+    display: block;
+    cursor: pointer;
+    background: url(menu.png) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+
+.bar1, .bar2 {
+  width: var(--navbar-animation-width);
+  height: var(--navbar-animation-height);
+  background-color: black;
+
+  transition-property: margin-top, transform;
+  transition-duration: var(--navbar-animation-step);
+  transition-delay: var(--navbar-animation-step), 0s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar1 {
+  margin-top: 0;
+}
+
+.bar2 {
+  margin-top: var(--navbar-animation-distance);
+  margin-bottom: 0;
+}
+
+input:checked+label>.bar1 {
+  transition-delay: 0s, var(--navbar-animation-step);
+  margin-top: calc(0.5 * var(--navbar-animation-distance) + 0.5 * var(--navbar-animation-height));
+  transform:rotate(-45deg);
+}
+
+input:checked+label>.bar2 {
+  transition-delay: 0s, var(--navbar-animation-step);
+  margin-top: calc(-1 * var(--navbar-animation-height));
+  margin-bottom: calc(0.5 * var(--navbar-animation-distance) + 0.5 * var(--navbar-animation-height));
+  transform:rotate(45deg);
+}
