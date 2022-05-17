@@ -42,6 +42,10 @@ body a:hover {
   color: var(--link-hover-color);
 }
 
+.content {
+  padding: 1rem 1.5rem;
+}
+
 .content *:first-child {
   margin-top: 0;
 }
